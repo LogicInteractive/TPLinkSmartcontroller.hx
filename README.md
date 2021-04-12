@@ -11,10 +11,7 @@ There is no authentication mechanism and commands are accepted independent of de
 #### TDDP ####
 
 TDDP is implemented across a whole range of TP-Link devices including routers, access points, cameras and smartplugs.
-TDDP can read and write a device's configuration and issue special commands. UDP port 1040 is used to send commands, replies come back on UDP port 61000. This client has been tested with a TP-Link Archer C9 Wireless Router and a TP-Link HS-110 WiFi Smart Plug.
-
-Commands are issued by setting the appropriate values in the Type and SubType header fields.
-Data is returned DES-encrypted and requires the username and password of the device to decrypt. Likewise, configuration data to be written to the device needs to be sent encrypted. The DES key is constructed by taking the MD5 hash of username and password concatenated together, and then taking the first 8 bytes of the MD5 hash.
+TDDP can read and write a device's configuration and issue special commands. UDP port 1040 is used to send commands, replies come back on UDP port 61000.
 
 #### Support / tested ####
 
