@@ -16,6 +16,7 @@ class TPLinkKasa
 	static public inline var GET_SYSINFO			: String  = '{"system":{"get_sysinfo":null}}';
 	static public inline var LED_OFF				: String  = '{"system":{"set_led_off":{"off":1}}}';
 	static public inline var LED_ON				    : String  = '{"system":{"set_led_off":{"off":0}}}';	
+	static public inline var REBOOT_DEVICE		    : String  = '{"system":{"reboot":{"delay":1}}}';	
 
 	/////////////////////////////////////////////////////////////////////////////////////
 

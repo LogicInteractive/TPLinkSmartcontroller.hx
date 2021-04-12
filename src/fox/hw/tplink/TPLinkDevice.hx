@@ -17,6 +17,41 @@ class TPLinkDevice
 		return TPLinkKasa.runCommand(ip, TPLinkKasa.GET_SYSINFO);
 	}
 
+	static public function reboot(ip:String):TPLinkKasaResponseData
+	{
+		return TPLinkKasa.runCommand(ip, TPLinkKasa.REBOOT_DEVICE);
+	}
+
+	static public function setLEDOnOff(ip:String, on:Bool):TPLinkKasaResponseData
+	{
+		return TPLinkKasa.runCommand(ip, on ? TPLinkKasa.LED_ON : TPLinkKasa.LED_OFF);
+	}
+	
+	static public function toggleLED(ip:String):Bool
+	{
+		var wasOn:Bool = isLEDOn(ip);
+		TPLinkKasa.runCommand(ip, wasOn ? TPLinkKasa.LED_OFF : TPLinkKasa.LED_ON);
+		return !wasOn;
+	}
+	
+	static public function isLEDOn(ip:String):Bool
+	{
+		var r:TPLinkKasaResponseData = getStatus(ip);
+		if (r==null)
+			return false;
+
+		var isOn:Bool = true;
+		try
+		{
+			isOn = r.system.get_sysinfo.led_off==0;
+		}
+		catch(e:haxe.Exception)
+		{
+			//...
+		}
+		return isOn;
+	}
+
 	/////////////////////////////////////////////////////////////////////////////////////
 
 }
