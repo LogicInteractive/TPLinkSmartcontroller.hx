@@ -4,7 +4,7 @@ TP-Link WiFi SmartPlug Controller for written for Haxe 4.2 +
 
 #### Description ####
 
-A Haxe library the proprietary TP-Link Smart Home protocol to control TP-Link HS100 and HS110 WiFi Smart Plugs.
+A Haxe library for the proprietary TP-Link Smart Home protocol to control TP-Link HS100 and HS110 WiFi Smart Plugs.
 The SmartHome protocol runs on TCP port 9999 and uses a trivial XOR autokey encryption that provides no security. 
 There is no authentication mechanism and commands are accepted independent of device state (configured/unconfigured).
 
