@@ -1,6 +1,6 @@
 package;
 
-import fox.hw.tplink.TPLinkKasa;
+import fox.hw.tplink.TPLinkDevice.TPLink_KP105;
 import haxe.io.Bytes;
 import haxe.io.BytesOutput;
 import no.logic.fox.utils.StringUtils;
@@ -14,11 +14,6 @@ import sys.net.Socket;
 
 function main()
 {
-	var check = TPLinkKasa.runCommand("192.168.68.138", TPLinkKasa.GET_SYSINFO);
-	
-	if (check.system.get_sysinfo.relay_state==0)
-		TPLinkKasa.runCommand("192.168.68.138", TPLinkKasa.SMARTPLUG_ON);
-	else
-		TPLinkKasa.runCommand("192.168.68.138", TPLinkKasa.SMARTPLUG_OFF);
-	
+	var ip = "192.168.68.138";
+	trace(TPLink_KP105.toggle(ip));
 }
