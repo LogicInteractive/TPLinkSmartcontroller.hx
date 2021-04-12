@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "c:\\dev\\fox"
+		}
+	],
+	"settings": {
+		"haxe.configurations": [],
+		"haxe.displayServer": {
+			"arguments": [
+				"-v"
+			]
+		},
+		"haxe.executable": "haxe",
+		"git.ignoreLimitWarning": true,
+	}
+}

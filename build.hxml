@@ -1,0 +1,19 @@
+###############################################
+
+-cp src
+-main TPLink
+--cpp bin/build
+-D HXCPP_STACK_TRACE
+-D HXCPP_STACK_LINE
+-D HXCPP_CHECK_POINTER
+-D HXCPP_M64
+--times
+
+###############################################
+
+#Windows 
+-D windows
+-cp c:/dev/fox/common
+-cp c:/dev/fox/thirdparty/common
+
+###############################################

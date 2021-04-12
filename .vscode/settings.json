@@ -1,0 +1,14 @@
+{
+  "haxe.configurations": [],
+  "editor.codeActionsOnSave": {
+    "source.sortImports": true
+  },
+  "haxe.displayServer": {
+    "arguments": [
+      "-v"
+    ]
+  },
+  "files.exclude": {
+    "src\\client": true
+  }
+}
