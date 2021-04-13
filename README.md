@@ -1,4 +1,4 @@
-# TPLinkKasa_SmartController
+# TPLinkSmartcontroller.hx
 
 TP-Link WiFi SmartPlug Controller for written for Haxe 4.2 +
 
